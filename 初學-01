@@ -1,0 +1,29 @@
+#印出三個大小漸增的文字
+<!DOCTYPE html>        <!--告訴browser使用HTML 5的版本-->
+<html>                 <!--擁有兩個子標籤 <head>和<body> -->
+  <head>               <!--此標籤內容是標題的元素，包含<title> <meta> <script> <style>標籤-->
+    <meta charset="UTF-8">    <!--可以指定網頁編碼為utf-8
+                                <meta>用途: HTML meta 標籤可以用來提供網頁內容的資訊給瀏覽器或是搜尋引擎，
+                                例如網頁內容的描述、網頁重要關鍵字、網頁編碼等都是常用 meta 來標示的網頁資訊，
+                                另外還有網頁作者、網頁發佈時間、所使用的編輯器等較不重要的資訊，
+                                也可以透過 META TAG 來標示，META 的功能僅是用來註明這些網頁資訊，
+                                且提供給瀏覽器或是搜尋引擎，並非是要給寫給瀏覽網頁的＂人＂看的內容。-->
+                                
+    <meta name="description" content="這裡可以寫網頁的簡短描述，供搜尋時可看到">
+    <title>warroirs.php</title>
+  </head>
+  <body>
+    <h3> 勇士隊 
+    <?php
+    $begin = 12;
+    $end = 18;
+
+    for($i = $begin; $i <= $end; $i += 3) {
+    ?>
+    <p style="font-size:<?php echo $i;?>pt">      <!-- font-size是設定文字大小，echo 為輸出變數 -->
+    總冠軍
+    <?php
+    print "</p>";  
+    }?>
+  </body>
+</html>
